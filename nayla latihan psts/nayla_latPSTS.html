@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran Project ICT - Kelas X</title>
+    
+    <!-- Menghubungkan Tailwind CSS lewat CDN sesuai kisi-kisi -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-100 font-sans text-gray-800">
+
+    <!-- 1. WEBSITE HEADER -->
+    <header class="bg-blue-600 text-white text-center py-10 px-4 mb-8">
+        <h1 class="text-3xl font-bold mb-2">Registrasi Project ICT 2026</h1>
+        <p class="text-blue-100 text-sm md:text-base">Silakan daftarkan nama tim dan detail project pameran teknologi kelas X di bawah ini.</p>
+    </header>
+
+    <!-- CONTAINER UTAMA (Agar konten rapi di tengah layar) -->
+    <main class="container mx-auto px-4 max-w-3xl space-y-10">
+
+        <!-- 2. HTML FORM (Form Registrasi) -->
+        <section class="bg-white p-6 rounded-lg shadow border border-gray-200">
+            <h2 class="text-xl font-semibold mb-4 border-b pb-2 text-blue-600">Formulir Pendaftaran</h2>
+            
+            <form action="#" method="POST" class="space-y-4">
+                
+                <!-- Input Text: Nama Ketua -->
+                <div>
+                    <label class="block text-sm font-medium mb-1">Nama Ketua Tim</label>
+                    <input type="text" placeholder="Masukkan nama lengkap" class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+
+                <!-- Input Text: Nama Tim -->
+                <div>
+                    <label class="block text-sm font-medium mb-1">Nama Tim / Kelompok</label>
+                    <input type="text" placeholder="Contoh: Cyber Team" class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+
+                <!-- Select & Option: Kelas -->
+                <div>
+                    <label class="block text-sm font-medium mb-1">Pilih Kelas</label>
+                    <select class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option value="">-- Pilih Kelas X --</option>
+                        <option value="X-1">Kelas X-1</option>
+                        <option value="X-2">Kelas X-2</option>
+                        <option value="X-3">Kelas X-3</option>
+                    </select>
+                </div>
+
+                <!-- Input Radio: Tipe Partisipasi -->
+                <div>
+                    <label class="block text-sm font-medium mb-1">Tipe Partisipasi</label>
+                    <div class="flex gap-4 mt-1">
+                        <label class="flex items-center gap-2 text-sm">
+                            <input type="radio" name="participation_type" value="Individual"> Individual
+                        </label>
+                        <label class="flex items-center gap-2 text-sm">
+                            <input type="radio" name="participation_type" value="Team"> Team / Kelompok
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Input Tel: Nomor Telepon -->
+                <div>
+                    <label class="block text-sm font-medium mb-1">Nomor Telepon Ketua</label>
+                    <input type="tel" placeholder="Contoh: 08123456789" class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+
+                <!-- Textarea: Deskripsi Project -->
+                <div>
+                    <label class="block text-sm font-medium mb-1">Deskripsi Singkat Project</label>
+                    <textarea placeholder="Jelaskan project website atau aplikasi yang akan dibuat..." rows="4" class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                </div>
+
+                <!-- Button: Tombol Registrasi -->
+                <div class="pt-2">
+                    <button type="submit" class="w-full bg-blue-600 text-white font-semibold py-2 px-4 rounded hover:bg-blue-700 transition">
+                        Daftar Sekarang
+                    </button>
+                </div>
+
+            </form>
+        </section>
+
+
+        <!-- 3. HTML TABLE (Tabel Data Pendaftar) -->
+        <section class="bg-white p-6 rounded-lg shadow border border-gray-200 overflow-x-auto">
+            <h2 class="text-xl font-semibold mb-4 border-b pb-2 text-blue-600">Daftar Tim Terregistrasi</h2>
+            
+            <table class="w-full border-collapse border border-gray-300 text-left text-sm">
+                <!-- Header Tabel -->
+                <thead class="bg-gray-100">
+                    <tr>
+                        <th class="border border-gray-300 p-3 font-semibold">No</th>
+                        <th class="border border-gray-300 p-3 font-semibold">Nama Tim</th>
+                        <th class="border border-gray-300 p-3 font-semibold">Kelas</th>
+                        <th class="border border-gray-300 p-3 font-semibold">Nama Proyek</th>
+                    </tr>
+                </thead>
+                <!-- Isi Tabel -->
+                <tbody>
+                    <tr class="hover:bg-gray-50">
+                        <td class="border border-gray-300 p-3">1</td>
+                        <td class="border border-gray-300 p-3">Alpha Tech</td>
+                        <td class="border border-gray-300 p-3">X-1</td>
+                        <td class="border border-gray-300 p-3">E-Commerce Website</td>
+                    </tr>
+                    <tr class="hover:bg-gray-50 bg-gray-50/30">
+                        <td class="border border-gray-300 p-3">2</td>
+                        <td class="border border-gray-300 p-3">Beta Squad</td>
+                        <td class="border border-gray-300 p-3">X-3</td>
+                        <td class="border border-gray-300 p-3">School Portals</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+    <!-- Footer Sederhana -->
+    <footer class="text-center text-gray-400 text-xs py-10">
+        &copy; 2026 Midterm Assessment ICT. Built with HTML & Tailwind CSS.
+    </footer>
+
+</body>
+</html>
